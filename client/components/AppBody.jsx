@@ -15,7 +15,22 @@ AppBody = React.createClass({
             </div>
           </div>
         </div>
+
+        <div className="tabs tabs-icon-top">
+          <a className="tab-item">
+            <i className="icon ion-alert"></i>
+            Item 1
+          </a>
+          <a className="tab-item">
+            <i className="icon ion-star"></i>
+            Item 2
+          </a>
+          <a className="tab-item">
+            <i className="icon ion-trophy"></i>
+            Item 3
+          </a>
+        </div>
       </div>
     )
   }
-})
+});
