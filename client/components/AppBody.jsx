@@ -46,9 +46,11 @@ AppBody = React.createClass({
           </div>
         </div>
 
+        {this.state.modal ? <Backdrop /> : false}
         <Transition transitionName='modal'>
           {this.state.modal}
         </Transition>
+
 
         <div className="tabs tabs-icon-top">
           {this.props.tabs.map((tab, i) => {
