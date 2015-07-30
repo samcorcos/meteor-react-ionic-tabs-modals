@@ -1,4 +1,25 @@
 AppBody = React.createClass({
+  // Requires tabs and makes sure it's a string
+
+  propTypes() {
+    tabs: React.PropTypes.string.isRequired
+  },
+  getDefaultProps() {
+    return {
+      tabs: ["Tab 1", "Tab 2", "Tab 3"]
+    }
+  },
+
+  getInitialState() {
+    return {
+      modal: false
+    }
+  },
+
+  ionModal(tab) {
+    console.log("modalled");
+  },
+
   render() {
     return (
       <div className="ionic-body">
@@ -16,21 +37,28 @@ AppBody = React.createClass({
           </div>
         </div>
 
+        {modal}
+
         <div className="tabs tabs-icon-top">
-          <a className="tab-item">
-            <i className="icon ion-alert"></i>
-            Item 1
-          </a>
-          <a className="tab-item">
-            <i className="icon ion-star"></i>
-            Item 2
-          </a>
-          <a className="tab-item">
-            <i className="icon ion-trophy"></i>
-            Item 3
-          </a>
+          {this.props.tabs.map((tab, i) => {
+              return (
+                <a className="tab-item" key={Random.hexString(24)} onClick={this.ionModal.bind(this, tab)}>
+                  <i className="icon ion-alert"></i>
+                  {tab}
+                </a>
+              )
+            })
+          }
         </div>
+
+
+
       </div>
     )
   }
 });
+
+// 'click [data-ion-modal]': function (event, template) {
+//   var templateName = $(event.currentTarget).data('ion-modal');
+//   IonModal.open(templateName, $(event.currentTarget).data());
+// },
