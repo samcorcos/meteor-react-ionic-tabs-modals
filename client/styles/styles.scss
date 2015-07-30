@@ -7,7 +7,7 @@
 
 .modal-enter.modal-enter-active {
   transform: translateY(0);
-  transition: transform .3s ease;;
+  transition: transform .3s ease;
 }
 
 .modal-leave {
@@ -16,5 +16,5 @@
 
 .modal-leave.modal-leave-active {
   transform: translateY(100%);
-  transition: transform .3s ease;;
+  transition: transform .3s ease;
 }

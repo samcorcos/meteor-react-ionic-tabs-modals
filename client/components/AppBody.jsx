@@ -1,4 +1,4 @@
-var Transition = React.addons.CSSTransitionGroup
+let Transition = React.addons.CSSTransitionGroup;
 
 AppBody = React.createClass({
   getDefaultProps() {
@@ -44,7 +44,7 @@ AppBody = React.createClass({
         </div>
 
         {this.state.modal ? <Backdrop /> : false}
-        <Transition transitionName='modal'>
+        <Transition transitionName="modal">
           {this.state.modal}
         </Transition>
 
@@ -52,7 +52,7 @@ AppBody = React.createClass({
         <div className="tabs tabs-icon-top">
           {this.props.tabs.map((tab, i) => {
               return (
-                <a className="tab-item" key={tab} onClick={this.ionModal.bind(this, tab)}>
+                <a className="tab-item" key={tab} onClick={this.ionModal.bind(null, tab)}>
                   <i className="icon ion-star"></i>
                   {tab}
                 </a>

@@ -21,11 +21,7 @@ IonModal = React.createClass({
 Backdrop = React.createClass({
   render() {
     return (
-      <div className="modal-backdrop active">
-
-      </div>
+      <div className="modal-backdrop active"></div>
     )
   }
 })
-
-// body needs class "modal-open" to     pointer-events: none;
