@@ -1,11 +1,6 @@
 var Transition = React.addons.CSSTransitionGroup
 
 AppBody = React.createClass({
-  // Requires tabs and makes sure it's a string
-
-  propTypes() {
-    tabs: React.PropTypes.array.isRequired
-  },
   getDefaultProps() {
     return {
       tabs: ["Tab 1", "Tab 2", "Tab 3"]
