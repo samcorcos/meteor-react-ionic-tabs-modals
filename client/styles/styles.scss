@@ -2,24 +2,21 @@
 @import ".meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons";
 
 .modal-enter {
-  opacity: 0.01;
-  transform: translateY(100px);
+  border: 1px solid black;
+  transform: translateY(50%) scale3d(0,0,0);
 }
 
 .modal-enter.modal-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity .5s ease, transform .5s ease;;
+  transform: translateY(0) scale3d(1,1,1);
+  transition: transform .5s ease;;
 }
 
 .modal-leave {
-  opacity: 0.01;
-  transform: translateY(0);
+  border: 1px solid black;
+  transform: translateY(0) scale3d(1,1,1);
 }
 
 .modal-leave.modal-leave-active {
-  opacity: 1;
-  transform: translateY(100px);
-  transition: opacity .5s ease;
-  transition: opacity .5s ease, transform .5s ease;;
+  transform: translateY(50%) scale3d(0,0,0);
+  transition: transform .5s ease;;
 }
