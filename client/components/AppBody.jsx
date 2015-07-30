@@ -17,7 +17,14 @@ AppBody = React.createClass({
   },
 
   ionModal(tab) {
-    console.log("modalled");
+    this.setState({
+      modal: (
+        <IonModal>
+          {tab}
+          <button onClick={ () => this.setState({modal:false}) }>close</button>
+        </IonModal>
+      )
+    })
   },
 
   render() {
@@ -37,7 +44,7 @@ AppBody = React.createClass({
           </div>
         </div>
 
-        {modal}
+        {this.state.modal}
 
         <div className="tabs tabs-icon-top">
           {this.props.tabs.map((tab, i) => {
