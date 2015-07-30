@@ -1,2 +1,25 @@
 @import ".meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic";
 @import ".meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons";
+
+.modal-enter {
+  opacity: 0.01;
+  transform: translateY(100px);
+}
+
+.modal-enter.modal-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .5s ease, transform .5s ease;;
+}
+
+.modal-leave {
+  opacity: 0.01;
+  transform: translateY(0);
+}
+
+.modal-leave.modal-leave-active {
+  opacity: 1;
+  transform: translateY(100px);
+  transition: opacity .5s ease;
+  transition: opacity .5s ease, transform .5s ease;;
+}
