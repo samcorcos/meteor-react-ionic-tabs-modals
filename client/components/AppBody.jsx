@@ -1,3 +1,5 @@
+var Transition = React.addons.CSSTransitionGroup
+
 AppBody = React.createClass({
   // Requires tabs and makes sure it's a string
 
@@ -44,7 +46,9 @@ AppBody = React.createClass({
           </div>
         </div>
 
-        {this.state.modal}
+        <Transition transitionName='modal'>
+          {this.state.modal}
+        </Transition>
 
         <div className="tabs tabs-icon-top">
           {this.props.tabs.map((tab, i) => {
