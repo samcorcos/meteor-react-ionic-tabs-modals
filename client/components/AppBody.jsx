@@ -52,8 +52,8 @@ AppBody = React.createClass({
         <div className="tabs tabs-icon-top">
           {this.props.tabs.map((tab, i) => {
               return (
-                <a className="tab-item" key={Random.hexString(24)} onClick={this.ionModal.bind(this, tab)}>
-                  <i className="icon ion-alert"></i>
+                <a className="tab-item" key={tab} onClick={this.ionModal.bind(this, tab)}>
+                  <i className="icon ion-star"></i>
                   {tab}
                 </a>
               )
