@@ -1,7 +1,7 @@
 IonModal = React.createClass({
   render() {
     return (
-      <div className="modal-backdrop active">
+      <div className="modal-backdrop">
         <div className="modal-wrapper">
           <div className="modal">
             <div className="bar bar-light bar-header">
