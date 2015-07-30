@@ -2,7 +2,7 @@ AppBody = React.createClass({
   // Requires tabs and makes sure it's a string
 
   propTypes() {
-    tabs: React.PropTypes.string.isRequired
+    tabs: React.PropTypes.array.isRequired
   },
   getDefaultProps() {
     return {
@@ -20,8 +20,8 @@ AppBody = React.createClass({
     this.setState({
       modal: (
         <IonModal>
-          {tab}
-          <button onClick={ () => this.setState({modal:false}) }>close</button>
+          <div className="h1 title">{tab}</div>
+          <button onClick={ () => this.setState({modal:false}) } className="button button-icon icon ion-close"></button>
         </IonModal>
       )
     })
